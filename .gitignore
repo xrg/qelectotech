@@ -1,0 +1,7 @@
+Makefile
+Makefile.Debug
+Makefile.Release
+qelectrotech
+qelectrotech.pro.user
+/release
+/sources/ui/ui_*.h
