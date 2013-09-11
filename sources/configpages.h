@@ -84,6 +84,7 @@ class GeneralConfigurationPage : public ConfigPage {
 	QCheckBox *highlight_integrated_elements_;
 	QLabel    *default_element_infos_label_;
 	QTextEdit *default_element_infos_textfield_;
+        QTextEdit *conf_language_;
 };
 
 /**

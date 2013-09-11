@@ -130,6 +130,10 @@ GeneralConfigurationPage::GeneralConfigurationPage(QWidget *parent) : ConfigPage
 	default_element_infos_textfield_ ->  setAcceptRichText(false);
 	
 	use_system_colors_ -> setChecked(use_system_colors);
+        conf_language_ = new QTextEdit();
+        conf_language_ -> setAcceptRichText(false);
+        conf_language_-> setText("el_GR");
+
 	
 	if (tabbed) {
 		tabbed_mode_ -> setChecked(true);
@@ -143,6 +147,7 @@ GeneralConfigurationPage::GeneralConfigurationPage(QWidget *parent) : ConfigPage
 	
 	QVBoxLayout *appearance_layout = new QVBoxLayout();
 	appearance_layout -> addWidget(use_system_colors_);
+        appearance_layout -> addWidget(conf_language_);
 	appearance_ -> setLayout(appearance_layout);
 	
 	QVBoxLayout *projects_view_mode_layout = new QVBoxLayout();
@@ -198,6 +203,7 @@ void GeneralConfigurationPage::applyConf() {
 	settings.setValue("diagrameditor/integrate-elements", integrate_elements_ -> isChecked());
 	settings.setValue("diagrameditor/highlight-integrated-elements", highlight_integrated_elements_ -> isChecked());
 	settings.setValue("elementeditor/default-informations", default_element_infos_textfield_ -> toPlainText());
+        settings.setValue("language", conf_language_->toPlainText());
 }
 
 /// @return l'icone de cette page
