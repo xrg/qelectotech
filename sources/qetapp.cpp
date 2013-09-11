@@ -1150,6 +1150,7 @@ void QETApp::configureQET() {
 	cd.addPage(new NewDiagramPage());
 	cd.addPage(new ExportConfigPage());
 	cd.addPage(new PrintConfigPage());
+        cd.addPage(new ExportConfigPage()); // δεύτερη φορά η export
 	
 	
 	// associe le dialogue a un eventuel widget parent
